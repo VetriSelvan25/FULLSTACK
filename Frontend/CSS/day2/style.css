@@ -1,0 +1,27 @@
+.head{
+    background-color:   violet;
+    color: #333;
+}
+
+.teacher{
+    background-color: rgb(32, 186, 237);
+    color: #333;
+}   
+
+.Student{
+    background-color: #c81a54;
+    color: #333;
+}
+.topics{
+    background-color: #f1f10c;
+    color: #333;
+}
+.status{
+    background-color: #0cf1f1;
+    color: #333;
+}
+
+.teacher{
+    background-color: #e6f7ff;
+    color: #333;
+}
