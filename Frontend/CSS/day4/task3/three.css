@@ -1,0 +1,21 @@
+.one{
+    width:200px;
+    background-color: rgb(234, 234, 223);
+    padding : 50px;
+    border : 10px solid blue;
+    margin :10px;
+}
+.two{
+    width:300px;
+    background-color: rgb(13, 240, 111);
+    padding : 50px;
+    border : 10px dashed red;
+    margin :10px;
+}
+.three{
+    width:400px;
+    background-color: rgb(10, 42, 247);
+    padding : 50px;
+    border : 10px dotted rgb(240, 17, 132);
+    margin :10px;
+}
