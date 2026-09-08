@@ -1,0 +1,52 @@
+*{
+    margin :0;
+    padding :0;
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+
+a{
+    text-decoration :none;
+}
+.logo{
+    width:160px;
+    background-color:white;
+}
+.parent
+{
+    background-color:white;
+    padding:20px;
+    display:flex;
+    align-items:center;
+    gap:60px;
+    padding-left:60px;
+}
+
+.searchbox{
+    width:500px;
+    height:40px;
+    border-radius:5px;
+    color:black;
+    border :1px solid black;
+
+}
+.nav{
+   display:flex;
+   gap:40px;
+
+}
+.bannerimg{
+width:100%;
+}
+.navtwo{
+    display:flex;
+    gap :40px;
+    padding:20px;
+}
+.card1{
+    background-color:
+}
