@@ -18,26 +18,38 @@ a{
 }
 .parent
 {
-    background-color:white;
+    background-color:grey;
     padding:20px;
     display:flex;
     align-items:center;
     gap:60px;
     padding-left:60px;
+    position:fixed; 
+    width:100vw;
 }
 
 .searchbox{
-    width:500px;
+    width:600px;
     height:40px;
     border-radius:5px;
     color:black;
+    padding-right:10px;
     border :1px solid black;
 
 }
 .nav{
    display:flex;
    gap:40px;
+    font-size:18px;
+    padding:10px;
+    background-color:green;
 
+}
+.navimg{
+ display:flex;
+   gap:40px;
+    font-size:18px;
+    padding:10px;
 }
 .bannerimg{
 width:100%;
@@ -48,5 +60,11 @@ width:100%;
     padding:20px;
 }
 .card1{
-    background-color:
+    background-color:blue;
+    padding:20px;
+    width :20%;
+    margin-top:10px;
+}
+.c1img{
+    width:250px;
 }

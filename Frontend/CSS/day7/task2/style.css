@@ -1,0 +1,40 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+    text-align: center;
+    padding-top: 50px;
+}
+
+.meesho-card {
+    width: 300px;
+    margin: auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+}
+
+
+.meesho-card img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 50%;
+    transition: 0.3s;
+}
+
+
+
+
+.meesho-card img:hover {
+    transform: scale(1.1);
+    border: 5px solid blue;
+    opacity: 0.7;
+}
+
+.meesho-card h2 {
+    margin-bottom: 5px;
+}
+
+.meesho-card p {
+    color: gray;
+}
