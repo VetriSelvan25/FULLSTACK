@@ -18,7 +18,7 @@ a{
 }
 .parent
 {
-    background-color:grey;
+    background-color:white;
     padding:20px;
     display:flex;
     align-items:center;
@@ -42,7 +42,7 @@ a{
    gap:40px;
     font-size:18px;
     padding:10px;
-    background-color:green;
+    background-color:white;
 
 }
 .navimg{
@@ -58,9 +58,10 @@ width:100%;
     display:flex;
     gap :40px;
     padding:20px;
+    margin-top:80px;
 }
 .card1{
-    background-color:blue;
+    background-color:white;
     padding:20px;
     width :20%;
     margin-top:10px;
