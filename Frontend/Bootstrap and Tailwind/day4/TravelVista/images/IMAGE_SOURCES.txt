@@ -1,0 +1,28 @@
+TravelVista image sources
+===========================
+
+The website uses remote images from Pexels so the ZIP stays lightweight.
+The images are marked "Free to use" on their respective Pexels pages.
+
+Paris:
+https://www.pexels.com/photo/eiffel-tower-in-paris-20413292/
+
+Bali:
+https://www.pexels.com/photo/beautiful-beach-27566873/
+
+Dubai:
+https://www.pexels.com/photo/dubai-skyline-featuring-burj-khalifa-34218532/
+
+Japan:
+https://www.pexels.com/photo/kiyomizu-dera-temple-in-kyoto-japan-16226405/
+
+Maldives:
+https://www.pexels.com/photo/beach-27561014/
+
+Santorini:
+https://www.pexels.com/photo/santorini-greece-1010656/
+
+Note:
+The HTML/CSS points directly to the Pexels image URLs. An internet connection is required
+for the photos to appear. The image source pages should be checked before commercial
+publication because licenses and page availability can change.

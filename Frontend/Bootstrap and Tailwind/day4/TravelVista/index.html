@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="TravelVista - Discover beautiful destinations, hotels and travel packages.">
+    <title>TravelVista - Explore The World</title>
+    <link rel="preconnect" href="https://images.pexels.com">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+    <nav class="navbar">
+        <a href="#home" class="logo">Travel<span>Vista</span></a>
+
+        <button class="menu-button" id="menuButton" aria-label="Open menu">☰</button>
+
+        <ul class="nav-links" id="navLinks">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#destinations">Destinations</a></li>
+            <li><a href="#packages">Packages</a></li>
+            <li><a href="#hotels">Hotels</a></li>
+            <li><a href="#gallery">Gallery</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+
+        <button id="themeButton" class="theme-button" aria-label="Toggle theme">🌙</button>
+    </nav>
+</header>
+
+<main>
+<section id="home" class="hero">
+    <div class="hero-overlay"></div>
+    <div class="floating-shape shape-one"></div>
+    <div class="floating-shape shape-two"></div>
+
+    <div class="hero-content reveal">
+        <p class="small-title">✈ EXPLORE • DREAM • DISCOVER</p>
+        <h1>Discover Your <span>Perfect Journey</span></h1>
+        <p>From peaceful beaches to unforgettable city adventures, discover places that turn every trip into a beautiful memory.</p>
+        <div class="hero-buttons">
+            <a href="#destinations" class="primary-button">Explore Destinations <span>→</span></a>
+            <a href="#packages" class="secondary-button">View Packages</a>
+        </div>
+        <div class="hero-stats">
+            <div><strong>50+</strong><span>Destinations</span></div>
+            <div><strong>10K+</strong><span>Happy Travelers</span></div>
+            <div><strong>4.9</strong><span>Average Rating</span></div>
+        </div>
+    </div>
+</section>
+
+<section class="search-section reveal">
+    <div class="search-box">
+        <div class="search-field">
+            <span>📍</span>
+            <div><label>Where to?</label><input type="text" id="destinationSearch" placeholder="Paris, Bali, Dubai..."></div>
+        </div>
+        <div class="search-field">
+            <span>📅</span>
+            <div><label>Check-in</label><input type="date" id="checkin"></div>
+        </div>
+        <div class="search-field">
+            <span>📅</span>
+            <div><label>Check-out</label><input type="date" id="checkout"></div>
+        </div>
+        <div class="search-field">
+            <span>👥</span>
+            <div><label>Travellers</label><input type="number" id="travellers" value="1" min="1"></div>
+        </div>
+        <button onclick="searchDestination()" class="search-button">Search</button>
+    </div>
+    <p id="searchResult"></p>
+</section>
+
+<section id="destinations" class="section">
+    <div class="section-heading reveal">
+        <p>EXPLORE</p>
+        <h2>Popular Destinations</h2>
+        <span>Handpicked places for your next unforgettable escape</span>
+    </div>
+
+    <div class="destination-container">
+        <article class="destination-card reveal" data-place="paris">
+            <div class="image-wrap">
+                <img src="https://images.pexels.com/photos/20413292/pexels-photo-20413292.jpeg?cs=srgb&dl=pexels-alejandro-aznar-155337093-20413292.jpg&fm=jpg" alt="Eiffel Tower in Paris" loading="lazy" onclick="openDestination('Paris')" tabindex="0" role="button">
+                <span class="image-badge">⭐ 4.8</span>
+            </div>
+            <div class="card-content">
+                <button class="location location-button" onclick="openDestination('Paris')">📍 France</button>
+                <h3>Paris</h3>
+                <p>Romantic streets, iconic landmarks, art, food and unforgettable city views.</p>
+                <div class="card-bottom"><strong>₹65,000</strong><span>7 Days</span></div>
+                <button onclick="explorePlace('Paris')">Explore <span>→</span></button>
+            </div>
+        </article>
+
+        <article class="destination-card reveal" data-place="bali">
+            <div class="image-wrap">
+                <img src="https://images.pexels.com/photos/27566873/pexels-photo-27566873.jpeg?cs=srgb&dl=pexels-senna-sault-1725638-27566873.jpg&fm=jpg" alt="Beautiful beach in Bali" loading="lazy" onclick="openDestination('Bali')" tabindex="0" role="button">
+                <span class="image-badge">⭐ 4.7</span>
+            </div>
+            <div class="card-content">
+                <button class="location location-button" onclick="openDestination('Bali')">📍 Indonesia</button>
+                <h3>Bali</h3>
+                <p>Tropical beaches, lush landscapes, temples and relaxing island experiences.</p>
+                <div class="card-bottom"><strong>₹45,000</strong><span>5 Days</span></div>
+                <button onclick="explorePlace('Bali')">Explore <span>→</span></button>
+            </div>
+        </article>
+
+        <article class="destination-card reveal" data-place="dubai">
+            <div class="image-wrap">
+                <img src="https://images.pexels.com/photos/34218532/pexels-photo-34218532.jpeg?cs=srgb&dl=pexels-vishnukalanad-34218532.jpg&fm=jpg" alt="Dubai skyline and Burj Khalifa" loading="lazy" onclick="openDestination('Dubai')" tabindex="0" role="button">
+                <span class="image-badge">⭐ 4.9</span>
+            </div>
+            <div class="card-content">
+                <button class="location location-button" onclick="openDestination('Dubai')">📍 UAE</button>
+                <h3>Dubai</h3>
+                <p>Modern skylines, luxury experiences, desert adventures and vibrant nightlife.</p>
+                <div class="card-bottom"><strong>₹55,000</strong><span>6 Days</span></div>
+                <button onclick="explorePlace('Dubai')">Explore <span>→</span></button>
+            </div>
+        </article>
+
+        <article class="destination-card reveal" data-place="japan">
+            <div class="image-wrap">
+                <img src="https://images.pexels.com/photos/16226405/pexels-photo-16226405.jpeg?cs=srgb&dl=pexels-balazsimon-16226405.jpg&fm=jpg" alt="Kiyomizu-dera Temple in Kyoto" loading="lazy" onclick="openDestination('Japan')" tabindex="0" role="button">
+                <span class="image-badge">⭐ 4.9</span>
+            </div>
+            <div class="card-content">
+                <button class="location location-button" onclick="openDestination('Japan')">📍 Japan</button>
+                <h3>Japan</h3>
+                <p>Ancient temples, cherry blossoms, peaceful gardens and modern city life.</p>
+                <div class="card-bottom"><strong>₹80,000</strong><span>8 Days</span></div>
+                <button onclick="explorePlace('Japan')">Explore <span>→</span></button>
+            </div>
+        </article>
+    </div>
+</section>
+
+<section class="why-us">
+    <div class="section-heading reveal"><p>WHY US</p><h2>Travel Made Simple</h2></div>
+    <div class="features">
+        <div class="feature reveal"><div class="feature-icon">💰</div><h3>Best Prices</h3><p>Smart packages designed to give you great value.</p></div>
+        <div class="feature reveal"><div class="feature-icon">🛡️</div><h3>Safe Travel</h3><p>Travel planning focused on comfort and peace of mind.</p></div>
+        <div class="feature reveal"><div class="feature-icon">🌎</div><h3>Worldwide</h3><p>Discover beautiful destinations across the globe.</p></div>
+        <div class="feature reveal"><div class="feature-icon">📞</div><h3>24/7 Support</h3><p>Get help whenever you need it during your journey.</p></div>
+    </div>
+</section>
+
+<section id="packages" class="section">
+    <div class="section-heading reveal"><p>TRAVEL PACKAGES</p><h2>Choose Your Experience</h2><span>Flexible plans for different travel styles</span></div>
+    <div class="packages-container">
+        <div class="package-card reveal">
+            <h3>Basic</h3><h2>₹25,000</h2><p>per person</p>
+            <ul><li>✓ 3 Days / 2 Nights</li><li>✓ 3 Star Hotel</li><li>✓ Breakfast</li><li>✓ Airport Transfer</li></ul>
+            <button onclick="bookPackage('Basic')">Book Now</button>
+        </div>
+        <div class="package-card popular reveal">
+            <div class="popular-label">MOST POPULAR</div>
+            <h3>Premium</h3><h2>₹50,000</h2><p>per person</p>
+            <ul><li>✓ 5 Days / 4 Nights</li><li>✓ 4 Star Hotel</li><li>✓ Breakfast & Dinner</li><li>✓ Airport Transfer</li><li>✓ Guided Tours</li></ul>
+            <button onclick="bookPackage('Premium')">Book Now</button>
+        </div>
+        <div class="package-card reveal">
+            <h3>Luxury</h3><h2>₹90,000</h2><p>per person</p>
+            <ul><li>✓ 7 Days / 6 Nights</li><li>✓ 5 Star Hotel</li><li>✓ All Meals</li><li>✓ Private Transport</li><li>✓ Personal Guide</li></ul>
+            <button onclick="bookPackage('Luxury')">Book Now</button>
+        </div>
+    </div>
+</section>
+
+<section id="hotels" class="hotel-section">
+    <div class="section-heading reveal"><p>STAY</p><h2>Beautiful Places To Stay</h2></div>
+    <div class="hotel-container">
+        <div class="hotel-card reveal"><div class="hotel-image"><img src="https://images.pexels.com/photos/20413292/pexels-photo-20413292.jpeg?cs=srgb&dl=pexels-alejandro-aznar-155337093-20413292.jpg&fm=jpg" alt="Hotel view in Paris" loading="lazy"><span>🏨</span></div><div class="hotel-info"><h3>Grand Palace Hotel</h3><p>📍 Paris</p><p>⭐ 4.8</p><strong>₹8,500 / night</strong><button onclick="bookHotel('Grand Palace Hotel')">Book Now</button></div></div>
+        <div class="hotel-card reveal"><div class="hotel-image"><img src="https://images.pexels.com/photos/27566873/pexels-photo-27566873.jpeg?cs=srgb&dl=pexels-senna-sault-1725638-27566873.jpg&fm=jpg" alt="Bali resort beach" loading="lazy"><span>🏝️</span></div><div class="hotel-info"><h3>Bali Paradise Resort</h3><p>📍 Bali</p><p>⭐ 4.7</p><strong>₹6,500 / night</strong><button onclick="bookHotel('Bali Paradise Resort')">Book Now</button></div></div>
+        <div class="hotel-card reveal"><div class="hotel-image"><img src="https://images.pexels.com/photos/34218532/pexels-photo-34218532.jpeg?cs=srgb&dl=pexels-vishnukalanad-34218532.jpg&fm=jpg" alt="Dubai city resort" loading="lazy"><span>🏨</span></div><div class="hotel-info"><h3>Dubai Luxury Resort</h3><p>📍 Dubai</p><p>⭐ 4.9</p><strong>₹12,000 / night</strong><button onclick="bookHotel('Dubai Luxury Resort')">Book Now</button></div></div>
+    </div>
+</section>
+
+<section id="gallery" class="section">
+    <div class="section-heading reveal"><p>TRAVEL MOMENTS</p><h2>Gallery</h2><span>A glimpse of the places waiting for you</span></div>
+    <div class="gallery">
+        <div class="gallery-item reveal"><img src="https://images.pexels.com/photos/20413292/pexels-photo-20413292.jpeg?cs=srgb&dl=pexels-alejandro-aznar-155337093-20413292.jpg&fm=jpg" alt="Paris" loading="lazy" onclick="openDestination('Paris')" tabindex="0" role="button"><div>Paris</div></div>
+        <div class="gallery-item reveal"><img src="https://images.pexels.com/photos/27566873/pexels-photo-27566873.jpeg?cs=srgb&dl=pexels-senna-sault-1725638-27566873.jpg&fm=jpg" alt="Bali" loading="lazy" onclick="openDestination('Bali')" tabindex="0" role="button"><div>Bali</div></div>
+        <div class="gallery-item reveal"><img src="https://images.pexels.com/photos/34218532/pexels-photo-34218532.jpeg?cs=srgb&dl=pexels-vishnukalanad-34218532.jpg&fm=jpg" alt="Dubai" loading="lazy" onclick="openDestination('Dubai')" tabindex="0" role="button"><div>Dubai</div></div>
+        <div class="gallery-item reveal"><img src="https://images.pexels.com/photos/16226405/pexels-photo-16226405.jpeg?cs=srgb&dl=pexels-balazsimon-16226405.jpg&fm=jpg" alt="Japan" loading="lazy" onclick="openDestination('Japan')" tabindex="0" role="button"><div>Japan</div></div>
+        <div class="gallery-item reveal"><img src="https://images.pexels.com/photos/27561014/pexels-photo-27561014.jpeg?cs=srgb&dl=pexels-tommy-ledin-465904252-27561014.jpg&fm=jpg" alt="Maldives" loading="lazy"><div>Maldives</div></div>
+        <div class="gallery-item reveal"><img src="https://images.pexels.com/photos/1010656/pexels-photo-1010656.jpeg?cs=srgb&dl=pexels-jimmy-teoh-294331-1010656.jpg&fm=jpg" alt="Santorini" loading="lazy"><div>Santorini</div></div>
+    </div>
+</section>
+
+<section class="calculator-section">
+    <div class="section-heading reveal"><p>PLAN YOUR TRIP</p><h2>Travel Budget Calculator</h2></div>
+    <div class="calculator reveal">
+        <label>Number of Travellers</label><input type="number" id="people" value="1" min="1">
+        <label>Hotel Cost Per Night</label><input type="number" id="hotelCost" value="5000" min="0">
+        <label>Number of Nights</label><input type="number" id="nights" value="3" min="1">
+        <label>Travel & Other Expenses</label><input type="number" id="travelCost" value="10000" min="0">
+        <button onclick="calculateBudget()">Calculate Budget</button>
+        <h3 id="totalBudget">Total: ₹0</h3>
+    </div>
+</section>
+
+<section class="reviews">
+    <div class="section-heading reveal"><p>TESTIMONIALS</p><h2>Loved By Travelers</h2></div>
+    <div class="review-container">
+        <div class="review reveal"><div class="stars">⭐⭐⭐⭐⭐</div><p>"TravelVista made our trip incredibly easy and enjoyable."</p><h4>Rahul</h4><span>Chennai, India</span></div>
+        <div class="review reveal"><div class="stars">⭐⭐⭐⭐⭐</div><p>"The hotel and travel arrangements were excellent."</p><h4>Priya</h4><span>Bengaluru, India</span></div>
+        <div class="review reveal"><div class="stars">⭐⭐⭐⭐⭐</div><p>"Amazing experience. I would definitely travel with them again."</p><h4>Arun</h4><span>Coimbatore, India</span></div>
+    </div>
+</section>
+
+<section class="faq">
+    <div class="section-heading reveal"><p>FAQ</p><h2>Frequently Asked Questions</h2></div>
+    <div class="faq-container reveal">
+        <div class="faq-item"><button onclick="toggleFAQ(this)">How can I book a trip?<span>+</span></button><p>Select your destination and package, then click the Book Now button.</p></div>
+        <div class="faq-item"><button onclick="toggleFAQ(this)">Can I cancel my booking?<span>+</span></button><p>Cancellation policies depend on the selected package and hotel.</p></div>
+        <div class="faq-item"><button onclick="toggleFAQ(this)">Do you provide airport transfers?<span>+</span></button><p>Airport transfers are available with selected travel packages.</p></div>
+    </div>
+</section>
+
+
+<!-- Dynamic destination explorer -->
+<div class="destination-modal" id="destinationModal" aria-hidden="true">
+    <div class="destination-modal-backdrop" onclick="closeDestination()"></div>
+
+    <div class="destination-panel" role="dialog" aria-modal="true" aria-labelledby="destinationTitle">
+        <button class="modal-close" onclick="closeDestination()" aria-label="Close destination">×</button>
+
+        <div class="destination-hero-image">
+            <img id="destinationHeroImage" src="" alt="">
+            <div class="destination-hero-overlay">
+                <span id="destinationCountry"></span>
+                <h2 id="destinationTitle"></h2>
+                <p id="destinationTagline"></p>
+            </div>
+        </div>
+
+        <div class="destination-details">
+            <div class="destination-intro">
+                <p id="destinationDescription"></p>
+                <div class="destination-facts" id="destinationFacts"></div>
+            </div>
+
+            <div class="places-heading">
+                <p>DON'T MISS</p>
+                <h3>Beautiful Places To Explore</h3>
+            </div>
+
+            <div class="places-grid" id="placesGrid"></div>
+
+            <div class="destination-actions">
+                <button class="primary-action" id="destinationBookButton">Plan This Trip →</button>
+                <button class="secondary-action" onclick="closeDestination()">Back to Destinations</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Full image viewer -->
+<div class="image-viewer" id="imageViewer" aria-hidden="true">
+    <button class="viewer-close" onclick="closeImageViewer()">×</button>
+    <button class="viewer-arrow viewer-prev" onclick="changeViewerImage(-1)">‹</button>
+    <div class="viewer-content">
+        <img id="viewerImage" src="" alt="">
+        <h3 id="viewerCaption"></h3>
+    </div>
+    <button class="viewer-arrow viewer-next" onclick="changeViewerImage(1)">›</button>
+</div>
+
+<section id="contact" class="contact">
+    <div class="section-heading reveal"><p>CONTACT US</p><h2>Let's Plan Your Journey</h2></div>
+    <form id="contactForm" class="reveal">
+        <input type="text" id="name" placeholder="Your Name">
+        <input type="email" id="email" placeholder="Your Email">
+        <input type="text" id="subject" placeholder="Subject">
+        <textarea id="message" placeholder="Tell us about your dream trip..."></textarea>
+        <button type="submit">Send Message →</button>
+    </form>
+</section>
+</main>
+
+<footer>
+    <div class="footer-content">
+        <div><h2>TravelVista</h2><p>Your journey begins here. Explore the world with us.</p></div>
+        <div><h3>Quick Links</h3><p><a href="#home">Home</a></p><p><a href="#destinations">Destinations</a></p><p><a href="#packages">Packages</a></p><p><a href="#contact">Contact</a></p></div>
+        <div><h3>Follow Us</h3><p>Instagram</p><p>Facebook</p><p>YouTube</p></div>
+    </div>
+    <div class="copyright">© 2026 TravelVista. All Rights Reserved.</div>
+</footer>
+
+<script src="js/script.js"></script>
+</body>
+</html>
